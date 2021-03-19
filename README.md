@@ -1,1 +1,3 @@
-# idb_backend
+# Strapi application
+
+A quick description of your strapi application
