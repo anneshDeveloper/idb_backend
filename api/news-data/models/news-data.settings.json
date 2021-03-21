@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "news_data",
+  "info": {
+    "name": "newsData",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "News_author": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Created_Date": {
+      "type": "string"
+    },
+    "News_type": {
+      "type": "enumeration",
+      "enum": [
+        "National",
+        "International",
+        "Sports",
+        "Politics",
+        "Science"
+      ]
+    },
+    "News_title": {
+      "type": "string"
+    },
+    "News_description": {
+      "type": "richtext"
+    },
+    "News_image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
